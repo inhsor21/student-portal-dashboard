@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XYZ University — Student Portal</title>  
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts: DM Serif Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar">
+
+    <!-- Logo / Branding -->
+    <div class="sidebar__brand">
+      <div class="sidebar__logo">
+        <span class="logo-icon">XYZ</span>
+      </div>
+      <div class="sidebar__brand-text">
+        <span class="sidebar__university">XYZ</span>
+        <span class="sidebar__sub">University</span>
+      </div>
+    </div>
+
+    <!-- Primary Navigation -->
+    <nav class="sidebar__nav" aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li class="nav-item active">
+          <a href="#" class="nav-link" aria-current="page">
+            <span class="nav-icon">
+              <!-- Dashboard icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                <rect x="14" y="14" width="7" height="7" rx="1"/>
+              </svg>
+            </span>
+            <span class="nav-label">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">
+              <!-- Subjects icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                <line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/>
+              </svg>
+            </span>
+            <span class="nav-label">Subjects</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">
+              <!-- Assignments icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </span>
+            <span class="nav-label">Assignments</span>
+            <span class="nav-badge">4</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">
+              <!-- Attendance icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+                <polyline points="9 16 11 18 15 14"/>
+              </svg>
+            </span>
+            <span class="nav-label">Attendance</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">
+              <!-- Profile icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </span>
+            <span class="nav-label">Profile</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="nav-icon">
+              <!-- Settings icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </span>
+            <span class="nav-label">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Semester Tag at bottom -->
+    <div class="sidebar__footer">
+      <span class="semester-tag">Spring Semester 2026</span>
+    </div>
+
+  </aside>
+  <!-- ===================== END SIDEBAR ===================== -->
+
+  <!-- ===================== MAIN WRAPPER ===================== -->
+  <div class="main-wrapper">
+
+    <!-- ===================== TOP NAVBAR ===================== -->
+    <header class="topbar" role="banner">
+
+      <!-- Hamburger for mobile -->
+      <button class="topbar__hamburger" id="hamburger" aria-label="Toggle sidebar" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Search bar (decorative/UI only) -->
+      <div class="topbar__search">
+        <span class="search-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <input type="search" placeholder="Search courses, assignments…" class="search-input" aria-label="Search portal" />
+      </div>
+
+      <!-- Right cluster: notifications + profile -->
+      <div class="topbar__right">
+
+        <!-- Notification bell -->
+        <button class="topbar__icon-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          <span class="notif-dot" aria-hidden="true"></span>
+        </button>
+
+        <!-- Messages -->
+        <button class="topbar__icon-btn" aria-label="Messages">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </button>
+
+        <!-- Profile chip -->
+        <div class="topbar__profile" role="button" tabindex="0" aria-label="Student profile menu">
+          <div class="avatar" aria-hidden="true">
+            <span>AS</span>
+          </div>
+          <div class="topbar__profile-info">
+            <span class="profile-name">Anika Sharma</span>
+            <span class="profile-role">BSc Computer Science · Year 3</span>
+          </div>
+          <span class="chevron-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </div>
+
+      </div>
+    </header>
+    <!-- ===================== END TOPBAR ===================== -->
+
+    <!-- ===================== PAGE CONTENT ===================== -->
+    <main class="content" id="main-content">
+
+      <!-- ---- Welcome Banner ---- -->
+      <section class="welcome-banner" aria-label="Welcome message">
+        <div class="welcome-banner__text">
+          <p class="welcome-banner__eyebrow">Thursday, 2 April 2026</p>
+            <h1 class="welcome-banner__heading">Welcome back, <em>Student</em> 👋</h1>          
+            <p class="welcome-banner__sub">You have <strong>2 assignments due this week</strong> and your next class starts in 40 minutes.</p>
+          <a href="#" class="btn btn--primary">View Schedule</a>
+        </div>
+        <div class="welcome-banner__illustration" aria-hidden="true">
+          <div class="illus-circle illus-circle--lg"></div>
+          <div class="illus-circle illus-circle--sm"></div>
+          <div class="illus-cap">🎓</div>
+        </div>
+      </section>
+
+      <!-- ---- Stats Cards Row ---- -->
+      <section class="stats-row" aria-label="Academic statistics">
+        <!-- Attendance Card -->
+        <article class="stat-card stat-card--attendance">
+          <div class="stat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <div class="stat-card__body">
+            <span class="stat-card__label">Attendance Rate</span>
+            <span class="stat-card__value">87<small>%</small></span>
+            <span class="stat-card__delta stat-card__delta--up">+2% this month</span>
+          </div>
+          <div class="stat-card__ring" aria-hidden="true">
+            <svg viewBox="0 0 36 36" class="ring-svg">
+              <circle class="ring-bg" cx="18" cy="18" r="15.9"/>
+              <circle class="ring-fill ring-fill--attendance" cx="18" cy="18" r="15.9" stroke-dasharray="87 13" stroke-dashoffset="25"/>
+            </svg>
+          </div>
+        </article>
+
+        <!-- GPA Card -->
+        <article class="stat-card stat-card--gpa">
+          <div class="stat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="stat-card__body">
+            <span class="stat-card__label">Current GPA</span>
+            <span class="stat-card__value">3.74</span>
+            <span class="stat-card__delta stat-card__delta--up">+0.12 vs last sem</span>
+          </div>
+          <div class="stat-card__ring" aria-hidden="true">
+            <svg viewBox="0 0 36 36" class="ring-svg">
+              <circle class="ring-bg" cx="18" cy="18" r="15.9"/>
+              <circle class="ring-fill ring-fill--gpa" cx="18" cy="18" r="15.9" stroke-dasharray="93.5 6.5" stroke-dashoffset="25"/>
+            </svg>
+          </div>
+        </article>
+
+        <!-- Pending Assignments Card -->
+        <article class="stat-card stat-card--pending">
+          <div class="stat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div class="stat-card__body">
+            <span class="stat-card__label">Pending Tasks</span>
+            <span class="stat-card__value">4</span>
+            <span class="stat-card__delta stat-card__delta--warn">2 due this week</span>
+          </div>
+          <div class="stat-card__ring" aria-hidden="true">
+            <svg viewBox="0 0 36 36" class="ring-svg">
+              <circle class="ring-bg" cx="18" cy="18" r="15.9"/>
+              <circle class="ring-fill ring-fill--pending" cx="18" cy="18" r="15.9" stroke-dasharray="40 60" stroke-dashoffset="25"/>
+            </svg>
+          </div>
+        </article>
+
+        <!-- Credits Completed Card -->
+        <article class="stat-card stat-card--credits">
+          <div class="stat-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <div class="stat-card__body">
+            <span class="stat-card__label">Credits Earned</span>
+            <span class="stat-card__value">84<small>/120</small></span>
+            <span class="stat-card__delta stat-card__delta--up">On track to graduate</span>
+          </div>
+          <div class="stat-card__ring" aria-hidden="true">
+            <svg viewBox="0 0 36 36" class="ring-svg">
+              <circle class="ring-bg" cx="18" cy="18" r="15.9"/>
+              <circle class="ring-fill ring-fill--credits" cx="18" cy="18" r="15.9" stroke-dasharray="70 30" stroke-dashoffset="25"/>
+            </svg>
+          </div>
+        </article>
+      </section>
+
+      <!-- ---- Two-Column: Timetable + Announcements ---- -->
+      <div class="two-col-grid">
+
+        <!-- Upcoming Classes / Timetable -->
+        <section class="card timetable-card" aria-labelledby="timetable-heading">
+          <div class="card__header">
+            <h2 class="card__title" id="timetable-heading">Today's Classes</h2>
+            <a href="#" class="card__link">Full schedule →</a>
+          </div>
+          <div class="timetable">
+
+            <!-- Past class -->
+            <div class="timetable__item timetable__item--done">
+              <div class="timetable__time">
+                <span class="time-start">08:00</span>
+                <span class="time-end">09:30</span>
+              </div>
+              <div class="timetable__dot-col" aria-hidden="true">
+                <div class="t-dot t-dot--done"></div>
+                <div class="t-line"></div>
+              </div>
+              <div class="timetable__details">
+                <span class="t-subject">Data Structures &amp; Algorithms</span>
+                <span class="t-meta">Room 204 · Prof. R. Mehta</span>
+                <span class="t-tag t-tag--done">Completed</span>
+              </div>
+            </div>
+
+            <!-- Active class -->
+            <div class="timetable__item timetable__item--active">
+              <div class="timetable__time">
+                <span class="time-start">10:00</span>
+                <span class="time-end">11:30</span>
+              </div>
+              <div class="timetable__dot-col" aria-hidden="true">
+                <div class="t-dot t-dot--active"></div>
+                <div class="t-line"></div>
+              </div>
+              <div class="timetable__details">
+                <span class="t-subject">Operating Systems</span>
+                <span class="t-meta">Room 110 · Prof. A. Kumar</span>
+                <span class="t-tag t-tag--live">Live Now</span>
+              </div>
+            </div>
+
+            <!-- Upcoming -->
+            <div class="timetable__item">
+              <div class="timetable__time">
+                <span class="time-start">13:00</span>
+                <span class="time-end">14:30</span>
+              </div>
+              <div class="timetable__dot-col" aria-hidden="true">
+                <div class="t-dot"></div>
+                <div class="t-line"></div>
+              </div>
+              <div class="timetable__details">
+                <span class="t-subject">Database Management Systems</span>
+                <span class="t-meta">Room 301 · Prof. S. Patel</span>
+                <span class="t-tag t-tag--upcoming">Upcoming</span>
+              </div>
+            </div>
+
+            <div class="timetable__item">
+              <div class="timetable__time">
+                <span class="time-start">15:00</span>
+                <span class="time-end">16:00</span>
+              </div>
+              <div class="timetable__dot-col" aria-hidden="true">
+                <div class="t-dot"></div>
+              </div>
+              <div class="timetable__details">
+                <span class="t-subject">Machine Learning Lab</span>
+                <span class="t-meta">Lab B2 · Dr. N. Joshi</span>
+                <span class="t-tag t-tag--upcoming">Upcoming</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Recent Announcements -->
+        <section class="card announcements-card" aria-labelledby="announce-heading">
+          <div class="card__header">
+            <h2 class="card__title" id="announce-heading">Announcements</h2>
+            <a href="#" class="card__link">View all →</a>
+          </div>
+          <ul class="announce-list" role="list">
+
+            <li class="announce-item announce-item--urgent">
+              <div class="announce-item__icon" aria-hidden="true">📢</div>
+              <div class="announce-item__body">
+                <span class="announce-item__title">Mid-Semester Exam Schedule Released</span>
+                <span class="announce-item__meta">Registrar's Office · 1 hour ago</span>
+                <p class="announce-item__text">Mid-semester exams are scheduled for 14–18 April. Please check your individual timetable on the portal.</p>
+              </div>
+              <span class="announce-badge announce-badge--urgent">Urgent</span>
+            </li>
+
+            <li class="announce-item">
+              <div class="announce-item__icon" aria-hidden="true">🎉</div>
+              <div class="announce-item__body">
+                <span class="announce-item__title">Hackathon 2026 — Registrations Open</span>
+                <span class="announce-item__meta">Student Affairs · Yesterday</span>
+                <p class="announce-item__text">Annual 36-hour hackathon starts 10 April. Teams of 2–4 students. Cash prizes up to ₹50,000!</p>
+              </div>
+              <span class="announce-badge announce-badge--event">Event</span>
+            </li>
+
+            <li class="announce-item">
+              <div class="announce-item__icon" aria-hidden="true">📚</div>
+              <div class="announce-item__body">
+                <span class="announce-item__title">Library Extended Hours — Exam Season</span>
+                <span class="announce-item__meta">Library Services · 2 days ago</span>
+                <p class="announce-item__text">The central library will remain open until 11 PM on weekdays until the end of April.</p>
+              </div>
+              <span class="announce-badge announce-badge--info">Info</span>
+            </li>
+
+            <li class="announce-item">
+              <div class="announce-item__icon" aria-hidden="true">🏆</div>
+              <div class="announce-item__body">
+                <span class="announce-item__title">Merit Scholarship Nominations Open</span>
+                <span class="announce-item__meta">Academic Office · 3 days ago</span>
+                <p class="announce-item__text">Students with GPA ≥ 3.5 can apply for the Chancellor's Merit Scholarship by 15 April.</p>
+              </div>
+              <span class="announce-badge announce-badge--event">Scholarship</span>
+            </li>
+
+          </ul>
+        </section>
+
+      </div>
+      <!-- ---- End Two-Column ---- -->
+
+      <!-- ---- Assignments Overview Table ---- -->
+      <section class="card assignments-card" aria-labelledby="assignments-heading">
+        <div class="card__header">
+          <h2 class="card__title" id="assignments-heading">Assignments Overview</h2>
+          <div class="card__header-actions">
+            <button class="btn btn--sm btn--outline">Filter</button>
+            <a href="#" class="card__link">All assignments →</a>
+          </div>
+        </div>
+
+        <div class="table-wrapper" role="region" aria-label="Assignments table" tabindex="0">
+          <table class="assignments-table">
+            <thead>
+              <tr>
+                <th scope="col">Assignment</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-row--pending">
+                <td class="td-title">
+                  <span class="td-icon">📄</span>
+                  <span>Binary Search Tree Implementation</span>
+                </td>
+                <td>Data Structures</td>
+                <td><span class="due-date due-date--critical">Apr 04, 2026</span></td>
+                <td><span class="status-pill status-pill--overdue">Overdue</span></td>
+                <td>
+                  <button class="btn btn--xs btn--primary">Submit</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="td-title">
+                  <span class="td-icon">📊</span>
+                  <span>Process Scheduling Report</span>
+                </td>
+                <td>Operating Systems</td>
+                <td><span class="due-date due-date--warning">Apr 07, 2026</span></td>
+                <td><span class="status-pill status-pill--pending">Pending</span></td>
+                <td>
+                  <button class="btn btn--xs btn--primary">Start</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="td-title">
+                  <span class="td-icon">🗃️</span>
+                  <span>ER Diagram for E-Commerce DB</span>
+                </td>
+                <td>DBMS</td>
+                <td><span class="due-date due-date--warning">Apr 10, 2026</span></td>
+                <td><span class="status-pill status-pill--inprogress">In Progress</span></td>
+                <td>
+                  <button class="btn btn--xs btn--outline">Continue</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="td-title">
+                  <span class="td-icon">🤖</span>
+                  <span>Linear Regression Model — Housing Data</span>
+                </td>
+                <td>Machine Learning</td>
+                <td><span class="due-date">Apr 15, 2026</span></td>
+                <td><span class="status-pill status-pill--pending">Pending</span></td>
+                <td>
+                  <button class="btn btn--xs btn--outline">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="td-title">
+                  <span class="td-icon">🌐</span>
+                  <span>REST API Design &amp; Documentation</span>
+                </td>
+                <td>Web Technologies</td>
+                <td><span class="due-date due-date--done">Mar 28, 2026</span></td>
+                <td><span class="status-pill status-pill--submitted">Submitted</span></td>
+                <td>
+                  <button class="btn btn--xs btn--ghost">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="td-title">
+                  <span class="td-icon">🧮</span>
+                  <span>Finite Automata Problem Set</span>
+                </td>
+                <td>Theory of Computation</td>
+                <td><span class="due-date due-date--done">Mar 20, 2026</span></td>
+                <td><span class="status-pill status-pill--graded">Graded · A</span></td>
+                <td>
+                  <button class="btn btn--xs btn--ghost">Review</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- ---- End Assignments ---- -->
+
+    </main>
+    <!-- ===================== END CONTENT ===================== -->
+
+  </div>
+  <!-- ===================== END MAIN WRAPPER ===================== -->
+
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+  <!-- Minimal JS for sidebar toggle -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar   = document.getElementById('sidebar');
+    const overlay   = document.getElementById('sidebarOverlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('sidebar--open');
+      hamburger.setAttribute('aria-expanded', open);
+      overlay.classList.toggle('sidebar-overlay--visible', open);
+      document.body.classList.toggle('no-scroll', open);
+    }
+
+    hamburger.addEventListener('click', toggleSidebar);
+    overlay.addEventListener('click', toggleSidebar);
+  </script>
+
+</body>
+</html>
